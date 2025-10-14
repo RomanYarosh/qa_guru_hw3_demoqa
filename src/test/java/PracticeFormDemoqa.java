@@ -1,5 +1,4 @@
 import com.codeborne.selenide.Configuration;
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -8,14 +7,14 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class PracticeForm_demoqa {
+public class PracticeFormDemoqa {
 
     @BeforeAll
     static void beforeAll() {
         Configuration.browserSize = "1920x1080";
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.pageLoadStrategy = "eager";
-        Configuration.holdBrowserOpen = true;
+        //Configuration.holdBrowserOpen = true;
         Configuration.timeout = 5000; // default 4000
     }
     
@@ -48,18 +47,16 @@ public class PracticeForm_demoqa {
 
         $("#submit").click();
 
-        $(".table-responsive").shouldHave(
-                text("Roman Yar"),
-                text("roman@email.com"),
-                text("Male"),
-                text("0123456789"),
-                text("01 June,1993"),
-                text("Computer Science, English"),
-                text("Sports, Music"),
-                text("images.jpg"),
-                text("My home"),
-                text("Haryana Panipat")
-        );
+        $(".table-responsive").shouldHave(text("Roman Yar"));
+        $(".table-responsive").shouldHave(text("roman@email.com"));
+        $(".table-responsive").shouldHave(text("Male"));
+        $(".table-responsive").shouldHave(text("0123456789"));
+        $(".table-responsive").shouldHave(text("01 June,1993"));
+        $(".table-responsive").shouldHave(text("Computer Science, English"));
+        $(".table-responsive").shouldHave(text("Sports, Music"));
+        $(".table-responsive").shouldHave(text("images.jpg"));
+        $(".table-responsive").shouldHave(text("My home"));
+        $(".table-responsive").shouldHave(text("Haryana Panipat"));
 
     }
 }
