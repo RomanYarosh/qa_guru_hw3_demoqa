@@ -38,7 +38,7 @@ public class PracticeFormDemoqa {
 
         $("#submit").scrollTo();
 
-        $("#uploadPicture").uploadFromClasspath("images.png");
+        $("#uploadPicture").uploadFromClasspath("image.jpg");
         $("#currentAddress").setValue("My home");
         $("#state").click();
         $("#stateCity-wrapper").$(byText("Haryana")).click();
@@ -54,7 +54,7 @@ public class PracticeFormDemoqa {
         $(".table-responsive").shouldHave(text("01 June,1993"));
         $(".table-responsive").shouldHave(text("Computer Science, English"));
         $(".table-responsive").shouldHave(text("Sports, Music"));
-        $(".table-responsive").shouldHave(text("images.jpg"));
+        $(".table-responsive").shouldHave(text("image.jpg"));
         $(".table-responsive").shouldHave(text("My home"));
         $(".table-responsive").shouldHave(text("Haryana Panipat"));
 
