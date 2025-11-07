@@ -5,13 +5,16 @@ import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.executeJavaScript;
 
 public class RegistrationPage {
 
     public  RegistrationPage openPage() {
         open("/automation-practice-form");
+        header.shouldHave(text("Practice Form"));
+        executeJavaScript("$('footer').remove();");
+        executeJavaScript("$('#fixedban').remove();");
         return this;
     }
 
@@ -27,7 +30,8 @@ public class RegistrationPage {
             currentAddress = $("#currentAddress"),
             stateInput = $("#state"),
             cityInput = $("#city"),
-            submitButton = $("#submit");
+            submitButton = $("#submit"),
+            header = $("h1");
 
     CalendarComponent calendarComponent = new CalendarComponent();
 
