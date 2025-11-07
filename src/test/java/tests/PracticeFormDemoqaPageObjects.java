@@ -21,7 +21,6 @@ public class PracticeFormDemoqaPageObjects extends TestBase {
                 .setSubject("En")
                 .setHobbies("Sports")
                 .setHobbies("Music")
-                .scrollToSubmitButton()
                 .setPicture("image.jpg")
                 .setAddress("My home")
                 .setState("Haryana")
@@ -46,7 +45,6 @@ public class PracticeFormDemoqaPageObjects extends TestBase {
                 .setLastName("Yar")
                 .setGender("Male")
                 .setNumber("0123456789")
-                .scrollToSubmitButton()
                 .setSubmit();
         new CheckForm()
                 .checkResult("Student Name", "Roman Yar")
@@ -60,7 +58,6 @@ public class PracticeFormDemoqaPageObjects extends TestBase {
                 .setLastName("Yar")
                 .setGender("Male")
                 .setNumber("0123456789")
-                .scrollToSubmitButton()
                 .setSubmit();
         new CheckForm()
                 .checkResult("Student Name", "Roman Yar")

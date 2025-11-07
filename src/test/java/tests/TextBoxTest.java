@@ -6,7 +6,6 @@ import pages.components.CheckTextBox;
 
 public class TextBoxTest extends TestBase {
     TextBoxPage textBoxPage = new TextBoxPage();
-//    CheckTextBox checkTextBox = new CheckTextBox();
 
     @Test
     void fillTextBox() {
