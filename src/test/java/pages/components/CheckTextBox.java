@@ -7,8 +7,11 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 
 public class CheckTextBox {
+    private static final SelenideElement outputBox = $("#output");
+
     public CheckTextBox checkResultBox(String key, String value) {
-        $("#output").$(byText(key)).parent()
+        outputBox.$(byText(key))
+                .parent()
                 .shouldHave(text(value));
         return this;
     }
