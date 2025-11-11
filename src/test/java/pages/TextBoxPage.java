@@ -17,6 +17,10 @@ public class TextBoxPage {
     public TextBoxPage openPage() {
         open("/text-box");
         header.shouldHave(text("Text Box"));
+        return this;
+    }
+
+    public TextBoxPage removeAds() {
         executeJavaScript("$('footer').remove();");
         executeJavaScript("$('#fixedban').remove();");
         return this;

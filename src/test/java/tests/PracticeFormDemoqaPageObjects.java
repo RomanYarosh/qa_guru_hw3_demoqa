@@ -11,6 +11,7 @@ public class PracticeFormDemoqaPageObjects extends TestBase {
     @Test
     void fillFormTest() {
         registrationPage.openPage()
+                .removeAds()
                 .setFirstName("Roman")
                 .setLastName("Yar")
                 .setEmail("roman@email.com")
@@ -41,6 +42,7 @@ public class PracticeFormDemoqaPageObjects extends TestBase {
     @Test
     void fillMinimalFormTest() {
         registrationPage.openPage()
+                .removeAds()
                 .setFirstName("Roman")
                 .setLastName("Yar")
                 .setGender("Male")
@@ -54,6 +56,7 @@ public class PracticeFormDemoqaPageObjects extends TestBase {
     @Test
     void fillNegativeFormTest() {
         registrationPage.openPage()
+                .removeAds()
                 .setFirstName("Roman")
                 .setLastName("Yar")
                 .setGender("Male")

@@ -13,10 +13,14 @@ public class RegistrationPage {
     public  RegistrationPage openPage() {
         open("/automation-practice-form");
         header.shouldHave(text("Practice Form"));
-        executeJavaScript("$('footer').remove();");
-        executeJavaScript("$('#fixedban').remove();");
         return this;
     }
+
+public RegistrationPage removeAds() {
+    executeJavaScript("$('footer').remove();");
+    executeJavaScript("$('#fixedban').remove();");
+    return this;
+}
 
     private SelenideElement firstNameInput = $("#firstName"),
             lastNameInput = $("#lastName"),

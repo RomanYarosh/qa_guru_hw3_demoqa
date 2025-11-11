@@ -10,6 +10,7 @@ public class TextBoxTest extends TestBase {
     @Test
     void fillTextBox() {
         textBoxPage.openPage()
+                .removeAds()
                 .setUserName("Roman")
                 .setUserEmail("roman@email.com")
                 .setCurrentAddress("This home")
